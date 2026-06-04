@@ -10,6 +10,7 @@ def process_ticket(ch, method, properties, body):
 
         print("\n===== TICKET RECIBIDO DESDE RABBITMQ =====")
         print(f"Título: {ticket['title']}")
+        print(f"Descripción: {ticket['description']}")
         print(f"Servidor: {ticket['server_worker']}")
 
         conexionDB.save_ticket(

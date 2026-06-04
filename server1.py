@@ -63,11 +63,11 @@ def socket_client(conn_client, addr_client):
                 conn_client.send("**** Ticket inválido ****".encode())
                 continue
 
-            print("\n===== NUEVO TICKET =====")
-            print(f"Servidor: {SERVER_NAME}")
+            print("\n========= TICKET =========")
             print(f"Título: {title}")
             print(f"Descripción: {description}")
             print(f"IP Cliente: {addr_client[0]}")
+            print(f"Servidor: {SERVER_NAME}")
 
             send_ticket(
                 {

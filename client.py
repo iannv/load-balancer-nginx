@@ -3,7 +3,7 @@ import time
 import json
 
 HOST = "localhost"
-PORT = 5001
+PORT = 5000
 
 
 def validate_server():
@@ -27,12 +27,11 @@ def validate_server():
 
 def configure_ticket(client_socket):
     try:
-        while True:
+        generate_new_ticket = True
+        while generate_new_ticket:
             print("\n****** SISTEMA DE TICKETS DE SOPORTE ******")
-            print("\n======== NUEVO TICKET ========")
+            print("\n============== NUEVO TICKET ==============")
 
-            # Solicitar si quiere generar nuevo ticket en vez de que sea siempre automatico
-            
             title = input("Título: ")
 
             if title.lower() == "salir":
@@ -51,6 +50,12 @@ def configure_ticket(client_socket):
 
             print("\nRespuesta servidor:")
             print(response.decode())
+
+            generate_ticket = input("¿Quiere generar un nuevo ticket? [S/N] : ")
+            if generate_ticket.lower() == "s":
+                generate_new_ticket = True
+            else:
+                generate_new_ticket = False
 
     except Exception as e:
         print(f"Error al enviar ticket: {e}")
