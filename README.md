@@ -1,4 +1,4 @@
-# Sistema Distribuido de Gestión de Tickets
+# Sistema Distribuido de Gestión de Tickets de Soporte
 
 ## Descripción
 
