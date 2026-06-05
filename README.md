@@ -10,8 +10,8 @@ Los tickets son enviados a RabbitMQ para desacoplar la recepción del procesamie
 
 ---
 
-## Arquitectura
-
+## Diagrama
+<img width="1487" height="799" alt="image" src="https://github.com/user-attachments/assets/9e76284c-884b-4846-b3d1-359a28709474" />
 
 ---
 
