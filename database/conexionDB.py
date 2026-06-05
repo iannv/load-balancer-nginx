@@ -2,7 +2,7 @@ import psycopg2
 
 DB_NAME = "tickets_db"
 DB_USER = "postgres"
-DB_PASSWORD = "ian"
+DB_PASSWORD = ""
 DB_HOST = "localhost"
 DB_PORT = "5432"
 
