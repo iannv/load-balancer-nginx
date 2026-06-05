@@ -11,7 +11,7 @@ Los tickets son enviados a RabbitMQ para desacoplar la recepción del procesamie
 ---
 
 ## Diagrama
-<img width="1487" height="799" alt="image" src="https://github.com/user-attachments/assets/9e76284c-884b-4846-b3d1-359a28709474" />
+<img width="1482" height="789" alt="image" src="https://github.com/user-attachments/assets/766b4bc4-525f-4659-8d6b-c386fd6f212c" />
 
 ---
 
