@@ -6,7 +6,8 @@ Este proyecto implementa un sistema distribuido de gestión de tickets utilizand
 
 La solución permite que clientes envíen tickets mediante conexiones TCP. Las solicitudes son distribuidas por un balanceador de carga Nginx hacia múltiples servidores trabajadores (workers), los cuales procesan las conexiones de forma concurrente utilizando un pool de hilos.
 
-Los tickets son enviados a RabbitMQ para desacoplar la recepción del procesamiento y posteriormente son almacenados en PostgreSQL mediante un consumidor dedicado.
+Los tickets son enviados a RabbitMQ, que actúa como intermediario entre los servidores workers y la base de datos. Un consumidor procesa los mensajes recibidos y los almacena en PostgreSQL.
+
 
 ---
 
@@ -61,11 +62,11 @@ Funciones:
 
 ### RabbitMQ
 
-Implementa una cola de mensajes para desacoplar la recepción de tickets del almacenamiento en la base de datos.
+Implementa una cola de mensajes que actúa como intermediaria entre los servidores workers y la base de datos.
 
 Cola utilizada:
 
-* tickets
+* Tickets
 
 ### Consumer
 
